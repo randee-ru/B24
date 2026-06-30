@@ -94,6 +94,19 @@
 - собственный компонент
 - отдельную подстраницу с номерами, звонками и аналитикой
 
+## Как показать плитку на старте маркетинга
+
+Страница `http://localhost:8080/marketing/` рисуется компонентом `bitrix:sender.start`, поэтому одного пункта меню мало.
+
+Если нужен видимый блок на стартовом экране, нужно править ещё и сам компонент:
+
+- [`www/bitrix/components/bitrix/sender.start/class.php`](/Users/pinomax/Documents/Битркис25/www/bitrix/components/bitrix/sender.start/class.php)
+- [`www/bitrix/components/bitrix/sender.start/templates/.default/template.php`](/Users/pinomax/Documents/Битркис25/www/bitrix/components/bitrix/sender.start/templates/.default/template.php)
+
+В этой рабочей копии я добавил плитку `Телефония`, которая ведёт на [`www/marketing/telephony/index.php`](/Users/pinomax/Documents/Битркис25/www/marketing/telephony/index.php).
+
+Важно: файлы под `bitrix/` обычно игнорируются в Git, так что если захочешь коммитить это в репозиторий, лучше отдельно решить, оставляем ли правку в ядре или переносим её в `local/`-оверрайд.
+
 ## Полезно
 
 - Bitrix24 не стоит коммитить целиком в Git, если в репозиторий попадает полный дистрибутив

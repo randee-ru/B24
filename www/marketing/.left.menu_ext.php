@@ -65,16 +65,13 @@ if (\Bitrix\Sender\Security\Access::current()->canViewRc())
 	];
 }
 
-if (CModule::IncludeModule('voximplant'))
-{
-	$aMenuLinks[] = [
-		'Телефония',
-		SITE_DIR.'marketing/telephony/',
-		[],
-		['menu_item_id' => 'menu_marketing_telephony'],
-		''
-	];
-}
+$aMenuLinks[] = [
+	'Телефония',
+	SITE_DIR.'marketing/telephony/',
+	[],
+	['menu_item_id' => 'menu_marketing_telephony'],
+	''
+];
 
 if (
 	method_exists(\Bitrix\Sender\Security\Access::current(), 'canViewToloka')
