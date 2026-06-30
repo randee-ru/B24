@@ -1,0 +1,5 @@
+.env
+db_data/
+www/
+*.log
+.DS_Store
