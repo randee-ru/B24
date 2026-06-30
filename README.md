@@ -78,6 +78,11 @@
 - Ядро `bitrix/` лучше не править напрямую
 - Для записи нужны права на `upload/`, `bitrix/cache/`, `bitrix/managed_cache/`, `bitrix/tmp/` и `local/`
 - Для отладки удобно включить Xdebug и работать через IDE
+- Если при установке появляется ошибка про `Push and Pull`, включи локальные опции очередей:
+  ```bash
+  ./scripts/enable-pull-local.sh
+  ```
+  Скрипт выставляет в базе `pull/nginx=Y` и связанные параметры, чтобы проверка `CPullOptions::GetQueueServerStatus()` проходила в Docker.
 
 ## Как добавить свой раздел в `marketing`
 
