@@ -79,6 +79,21 @@
 - Для записи нужны права на `upload/`, `bitrix/cache/`, `bitrix/managed_cache/`, `bitrix/tmp/` и `local/`
 - Для отладки удобно включить Xdebug и работать через IDE
 
+## Как добавить свой раздел в `marketing`
+
+Чтобы добавить собственный пункт, например `Телефония`, сделай два шага:
+
+1. Добавь пункт меню в [`www/marketing/.left.menu_ext.php`](/Users/pinomax/Documents/Битркис25/www/marketing/.left.menu_ext.php)
+2. Создай страницу раздела, например [`www/marketing/telephony/index.php`](/Users/pinomax/Documents/Битркис25/www/marketing/telephony/index.php)
+
+Потом открой `http://localhost:8080/marketing/` и обнови страницу. Новый пункт появится рядом с другими разделами маркетинга.
+
+Если нужно, в эту страницу можно подключить:
+
+- штатный модуль телефонии `bitrix:voximplant.start`
+- собственный компонент
+- отдельную подстраницу с номерами, звонками и аналитикой
+
 ## Полезно
 
 - Bitrix24 не стоит коммитить целиком в Git, если в репозиторий попадает полный дистрибутив

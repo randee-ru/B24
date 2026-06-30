@@ -1,5 +1,11 @@
 .env
 db_data/
-www/
+www/*
+!www/marketing/
+www/marketing/*
+!www/marketing/.left.menu_ext.php
+!www/marketing/telephony/
+www/marketing/telephony/*
+!www/marketing/telephony/index.php
 *.log
 .DS_Store
