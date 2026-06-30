@@ -1,4 +1,6 @@
 <?php
+$MESS["VOXIMPLANT_START_MODULE_NOT_INSTALLED"] = "The Voximplant telephony module is not installed in this portal.";
+$MESS["VOXIMPLANT_START_MODULE_NOT_INSTALLED_ACTION"] = "Open module list";
 $MESS["VOX_START_5_NUMBER_RENT"] = "5 number pack";
 $MESS["VOX_START_10_NUMBER_RENT"] = "10 number pack";
 $MESS["VOX_START_ACCESS_CONTROL"] = "Access permissions";

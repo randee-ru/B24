@@ -2,6 +2,27 @@
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main\Localization\Loc;
+$bodyClass = $APPLICATION->getPageProperty("BodyClass");
+$APPLICATION->setPageProperty("BodyClass", ($bodyClass ? $bodyClass." " : "")."no-all-paddings no-background no-hidden");
+
+if ($arResult['ERROR_MESSAGE'] ?? null)
+{
+	?>
+	<div class="sender-start-wrap">
+		<div class="sender-start-block">
+			<div class="ui-alert ui-alert-danger ui-alert-icon-danger">
+				<span class="ui-alert-message"><?= htmlspecialcharsbx($arResult['ERROR_MESSAGE'])?></span>
+			</div>
+			<div style="margin-top: 16px;">
+				<a class="ui-btn ui-btn-primary" href="<?= htmlspecialcharsbx($arResult['SETUP_URL']) ?>">
+					<?= htmlspecialcharsbx(Loc::getMessage('VOXIMPLANT_START_MODULE_NOT_INSTALLED_ACTION')) ?>
+				</a>
+			</div>
+		</div>
+	</div>
+	<?php
+	return;
+}
 
 \Bitrix\Main\UI\Extension::load([
 	"popup",
@@ -20,8 +41,7 @@ use Bitrix\Main\Localization\Loc;
 ]);
 
 $APPLICATION->IncludeComponent("bitrix:ui.info.helper", "", array());
-$bodyClass = $APPLICATION->getPageProperty("BodyClass");
-$APPLICATION->setPageProperty("BodyClass", ($bodyClass ? $bodyClass." " : "")."no-all-paddings no-background no-hidden");
+
 $voxStartRentOrLink =
 	\Bitrix\Main\Application::getInstance()->getLicense()->getRegion() === 'ua'
 	|| \Bitrix\Main\Application::getInstance()->getContext()->getLanguage() === 'ua'
@@ -35,11 +55,6 @@ $isRussianRegion = in_array(
 );
 ?>
 
-<? if ($arResult['ERROR_MESSAGE'] ?? null): ?>
-	<div class="ui-alert ui-alert-danger ui-alert-icon-danger">
-		<span class="ui-alert-message"><?= htmlspecialcharsbx($arResult['ERROR_MESSAGE'])?></span>
-	</div>
-<? else: ?>
 	<div class="voximplant-start-wrap">
 		<? if ($arResult['SHOW_VOXIMPLANT']): ?>
 			<div class="voximplant-start-head-box-container">
@@ -203,4 +218,3 @@ $isRussianRegion = in_array(
 			isRussianRegion: '<?= $isRussianRegion ? 'Y' : 'N' ?>',
 		});
 	</script>
-<? endif ?>

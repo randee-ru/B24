@@ -186,8 +186,12 @@ class VoximplantStartComponent extends \CBitrixComponent
 	{
 		if (!\Bitrix\Main\Loader::includeModule("voximplant"))
 		{
-			ShowError('voximplant module is not installed');
-			return false;
+			$this->arResult = [
+				'ERROR_MESSAGE' => Loc::getMessage('VOXIMPLANT_START_MODULE_NOT_INSTALLED'),
+				'SETUP_URL' => '/bitrix/admin/module_admin.php?lang=' . LANGUAGE_ID,
+			];
+			$this->includeComponentTemplate();
+			return true;
 		}
 		$this->arResult = $this->prepareResult();
 

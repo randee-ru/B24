@@ -1,4 +1,6 @@
 <?php
+$MESS["VOXIMPLANT_START_MODULE_NOT_INSTALLED"] = "Модуль телефонии Voximplant не установлен в этой базе.";
+$MESS["VOXIMPLANT_START_MODULE_NOT_INSTALLED_ACTION"] = "Открыть список модулей";
 $MESS["VOX_START_NUMBER_RENT"] = "Аренда номера";
 $MESS["VOX_START_5_NUMBER_RENT"] = "Пакет 5 номеров";
 $MESS["VOX_START_10_NUMBER_RENT"] = "Пакет 10 номеров";

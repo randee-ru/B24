@@ -29,3 +29,5 @@ $MESS["VOX_START_TELEPHONY_CRM_INTEGRATION"] = "Embedded CRM form";
 $MESS["VOX_START_TELEPHONY_EXPENSES"] = "Call expenses";
 $MESS["VOX_START_TELEPHONY_SETTINGS"] = "Configure telephony";
 $MESS["VOX_START_TOP_UP"] = "Top up";
+$MESS["VOXIMPLANT_START_MODULE_NOT_INSTALLED"] = "The Voximplant telephony module is not installed in this portal.";
+$MESS["VOXIMPLANT_START_MODULE_NOT_INSTALLED_ACTION"] = "Open module list";

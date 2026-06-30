@@ -29,3 +29,5 @@ $MESS["VOX_START_SIP_BUY_POPUP_TEXT"] = "You are about to transfer data outside 
 $MESS["VOX_START_POPUP_BUTTON_I_AGREE"] = "Согласен";
 $MESS["VOX_START_POPUP_BUTTON_CANCEL"] = "Отменить";
 $MESS["VOX_NOT_BITRIX_BALANCE_HINT"] = "Оплата выполняется на сайте оператора связи ООО \"Фастком\"";
+$MESS["VOXIMPLANT_START_MODULE_NOT_INSTALLED"] = "Модуль телефонии Voximplant не установлен в этой базе.";
+$MESS["VOXIMPLANT_START_MODULE_NOT_INSTALLED_ACTION"] = "Открыть список модулей";
