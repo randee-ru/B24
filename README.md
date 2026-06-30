@@ -83,6 +83,11 @@
   ./scripts/enable-pull-local.sh
   ```
   Скрипт выставляет в базе `pull/nginx=Y` и связанные параметры, чтобы проверка `CPullOptions::GetQueueServerStatus()` проходила в Docker.
+- Если на странице входа появляется `LICENSE_NOT_FOUND` или QR-авторизация пытается ходить во внешний сервис, выключи её в локалке:
+  ```bash
+  ./scripts/disable-qrcode-auth-local.sh
+  ```
+  Это отключает только QR-вход через `bitrix:system.auth.authorize`; обычный логин остаётся рабочим.
 
 ## Как добавить свой раздел в `marketing`
 
