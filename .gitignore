@@ -1,6 +1,13 @@
 .env
 db_data/
 www/*
+!www/local/
+www/local/*
+!www/local/components/
+www/local/components/*
+!www/local/components/bitrix/
+www/local/components/bitrix/*
+!www/local/components/bitrix/voximplant.start/
 !www/marketing/
 www/marketing/*
 !www/marketing/.left.menu_ext.php

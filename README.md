@@ -100,12 +100,12 @@
 
 Если нужен видимый блок на стартовом экране, нужно править ещё и сам компонент:
 
-- [`www/bitrix/components/bitrix/sender.start/class.php`](/Users/pinomax/Documents/Битркис25/www/bitrix/components/bitrix/sender.start/class.php)
-- [`www/bitrix/components/bitrix/sender.start/templates/.default/template.php`](/Users/pinomax/Documents/Битркис25/www/bitrix/components/bitrix/sender.start/templates/.default/template.php)
+- [`www/local/components/bitrix/voximplant.start/class.php`](/Users/pinomax/Documents/Битркис25/www/local/components/bitrix/voximplant.start/class.php)
+- [`www/local/components/bitrix/voximplant.start/templates/.default/template.php`](/Users/pinomax/Documents/Битркис25/www/local/components/bitrix/voximplant.start/templates/.default/template.php)
 
-В этой рабочей копии я добавил плитку `Телефония`, которая ведёт на [`www/marketing/telephony/index.php`](/Users/pinomax/Documents/Битркис25/www/marketing/telephony/index.php).
+В этой рабочей копии я добавил локальный override компонента `voximplant.start`, который показывает плитку `Телефония` и ведёт на [`www/marketing/telephony/index.php`](/Users/pinomax/Documents/Битркис25/www/marketing/telephony/index.php).
 
-Важно: файлы под `bitrix/` обычно игнорируются в Git, так что если захочешь коммитить это в репозиторий, лучше отдельно решить, оставляем ли правку в ядре или переносим её в `local/`-оверрайд.
+Важно: ядро `bitrix/` не трогаем, вся кастомизация лежит в `local/components`.
 
 ## Полезно
 
